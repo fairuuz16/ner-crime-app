@@ -6,8 +6,8 @@ import re
 @st.cache_resource
 def load_model():
     """Loads the NER pipeline from HuggingFace."""
-    tokenizer = AutoTokenizer.from_pretrained("fairuuz/ner-crime-indobertweet")
-    model = AutoModelForTokenClassification.from_pretrained("fairuuz/ner-crime-indobertweet")
+    tokenizer = AutoTokenizer.from_pretrained("fairuuz/ner-crime-bertbase")
+    model = AutoModelForTokenClassification.from_pretrained("fairuuz/ner-crime-bertbase")
     ner_pipe = pipeline("ner", model=model, tokenizer=tokenizer, aggregation_strategy="simple")
     return ner_pipe
 
