@@ -45,7 +45,7 @@ def highlight_entities(text, entities, theme='Light'):
     return highlighted_text
 
 st.set_page_config(
-    page_title="NER Analisis Kriminalitas",
+    page_title="NER Crime News Analysis",
     page_icon="🔍",
     layout="wide",
     initial_sidebar_state="auto"
@@ -75,8 +75,8 @@ except Exception as e:
     model_loaded = False
     st.error(f"Error memuat model: {str(e)}")
 
-st.title("NER Analisis Berita Kriminalitas 🔍")
-st.markdown("Ekstraksi Informasi Kriminalitas dari Teks Berita Indonesia dengan Named Entity Recognition (NER)")
+st.title("NER Crime News Analysis 🔍")
+st.markdown("Sistem analisis dan ekstraksi entitas dari berita kriminalitas Indonesia menggunakan Named Entity Recognition (NER).")
 
 col1, col2 = st.columns([1, 1], gap="large")
 
